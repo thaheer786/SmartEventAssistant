@@ -8,7 +8,7 @@ const sendTokenResponse = (user, statusCode, res, rememberMe = false) => {
   const token = signToken(user._id, rememberMe ? '30d' : undefined);
   const cookieOptions = getCookieOptions(rememberMe);
 
-  res.cookie('jwt', token, cookieOptions);
+  res.cookie('jwt', token, cookieOptions); 
 
   return res.status(statusCode).json({
     status: 'success',
