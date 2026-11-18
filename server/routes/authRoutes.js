@@ -3,7 +3,7 @@ import { body, validationResult } from 'express-validator';
 import { forgotPassword, login, logout, me, register, resetPassword } from '../controllers/authController.js';
 import { protect } from '../middleware/authMiddleware.js';
 
-const router = express.Router();
+const router = express.Router();  
 
 const handleValidation = (req, res, next) => {
   const errors = validationResult(req);
